@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweet Treats Luxury</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+  <h1>Sweet Treats</h1>
+</div>
+
+<script>
+setTimeout(() => {
+  let loader = document.getElementById("loader");
+  if(loader) loader.style.display = "none";
+}, 3000);
+</script>
+
+<!-- NAVBAR -->
+<header>
+  <h2>Sweet Treats</h2>
+  <button class="cart-btn" onclick="openCart()">🛒 <span id="cart-count">0</span></button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Delicious Cakes Made With Love</h1>
+  <p>Premium cakes for your special moments</p>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+
+  <div class="card">
+    <img src="images/cake1.jpg">
+    <h3>Chocolate Cake</h3>
+    <p>₹500</p>
+    <button onclick="addToCart('Chocolate Cake',500)">Add</button>
+  </div>
+
+  <div class="card">
+    <img src="images/cake2.jpg">
+    <h3>Strawberry Cake</h3>
+    <p>₹600</p>
+    <button onclick="addToCart('Strawberry Cake',600)">Add</button>
+  </div>
+
+  <div class="card">
+    <img src="images/cake3.jpg">
+    <h3>Black Forest</h3>
+    <p>₹700</p>
+    <button onclick="addToCart('Black Forest',700)">Add</button>
+  </div>
+
+</section>
+
+<!-- CART -->
+<div id="cart">
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
+
+  <div class="form">
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="text" id="phone" placeholder="Phone Number">
+    <textarea id="address" placeholder="Address"></textarea>
+  </div>
+
+  <button class="order-btn" onclick="sendOrder()">Order on WhatsApp</button>
+  <button class="close-btn" onclick="closeCart()">Close</button>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Sweet Treats | Created by Mazin IT and Solutions</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
